@@ -39,6 +39,12 @@ void View::jugarView() {
         cout << "3. Slots" << endl;
         cout << "Opcion: ";
         cin >> idJuego;
+
+        Juego* juego = casino.obtenerJuego(idJuego);
+        if (juego != nullptr) {
+            juego->mostrarReglas(); // <<<<<<<<<< MOSTRAR LAS REGLAS
+        }
+
         std::string textoResultado;
         gonzosResultado = casino.jugar(idJuego, idJugador, cantGonzos);
         if (gonzosResultado > 0) {

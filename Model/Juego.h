@@ -20,7 +20,7 @@ public:
     virtual ~Juego() = default;
 
     virtual float jugar(float gonzosApostar) = 0;
-
+    void mostrarReglas() const override;
 
 };
 

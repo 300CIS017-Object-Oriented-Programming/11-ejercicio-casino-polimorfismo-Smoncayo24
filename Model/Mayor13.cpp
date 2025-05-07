@@ -3,6 +3,7 @@
 //
 
 #include "Mayor13.h"
+#include <iostream>
 
 float Mayor13::jugar(float gonzosApostar) {
     int opcion;
@@ -43,4 +44,12 @@ float Mayor13::calcularResultado(float gonzosApostar) {
     } else {
         return lowestResult;
     }
+}
+
+void Mayor13::mostrarReglas()const {
+    cout <<"\n REGLAS MAYOR DE 13";
+    cout << "\n 1) Se genera numero entre 1 y 13";
+    cout << "\n 2) Puedes rendirte (pierdes la mitad) o continuar...";
+    cout <<"\n 3) Si tienes mayor que la casa, ganas el DOBLE";
+    cout<<"\n 4) Si es menor pierdes";
 }

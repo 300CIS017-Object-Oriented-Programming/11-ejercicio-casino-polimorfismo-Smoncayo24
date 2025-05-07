@@ -52,6 +52,17 @@ float DosColores::calcularResultado(float gonzosApostar) {
         return lowestResult;
     }
 }
+
+void DosColores::mostrarReglas() const {
+    cout << "\nREGLAS DOS COLORES";
+    cout << "\n1. El jugador elige un color entre blanco y negro" << endl;
+    cout << "\n2. El sistema genera un número aleatorio y un color" << endl;
+    cout << "\n3. Si coinciden numero y color GANA 4 veces lo apostado." << endl;
+    cout << "\n4. Si coincide el numero GANA 1.5 veces lo apostado." << endl;
+    cout << "\n5. Si coincide el color no gana ni pierde." << endl;
+    cout << "\n6. Si no coincide nada pierde todo lo apostado." << endl;
+}
+
 /* Como el constructor se definio por defecto no hay que poner constructo vacio
 DosColores::~DosColores() {
 

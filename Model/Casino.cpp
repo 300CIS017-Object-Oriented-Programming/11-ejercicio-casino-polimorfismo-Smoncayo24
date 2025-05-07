@@ -173,3 +173,11 @@ Casino::~Casino() {
     }
     cout << "Termine de llamar destructor de casino \n";
 }
+
+Juego* Casino::obtenerJuego(int idJuego) {
+    if (idJuego > 0 && idJuego <= juegos.size()) {
+        return juegos[idJuego - 1]; // asumiendo que están en orden
+    } else {
+        return nullptr;
+    }
+}

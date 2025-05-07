@@ -33,7 +33,7 @@ private:
 
 public:
     Casino();
-
+    Juego* obtenerJuego(int idJuego);
     virtual ~Casino();
 
     float convertirPesosAGonzos(float dinero);
