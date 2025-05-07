@@ -37,8 +37,15 @@ void View::jugarView() {
         cout << "1. Mayor a 13." << endl;
         cout << "2. Dos colores." << endl;
         cout << "3. Slots" << endl;
+        cout << "4. Par Impar" << endl;
         cout << "Opcion: ";
         cin >> idJuego;
+
+        Juego* juego = casino.obtenerJuego(idJuego);
+        if (juego != nullptr) {
+            juego->mostrarReglas(); // <<<<<<<<<< MOSTRAR LAS REGLAS
+        }
+
         std::string textoResultado;
         gonzosResultado = casino.jugar(idJuego, idJugador, cantGonzos);
         if (gonzosResultado > 0) {

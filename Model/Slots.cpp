@@ -32,3 +32,10 @@ float Slots::calcularResultado(float gonzosApostar) {
         return 0;
     }
 }
+
+void Slots::mostrarReglas() const {
+    cout <<"\n REGLAS SLOTS";
+    cout << "\n 1) Se genera 3 simbolos";
+    cout << "\n 2) si caen en alguna combinacion, el jugador GANARA";
+    cout << "\n 3) De lo contrario, perdera";
+}

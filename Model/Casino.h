@@ -13,6 +13,7 @@
 #include "Mayor13.h"
 #include "DosColores.h"
 #include "Slots.h"
+#include "ParImpar.h"
 
 
 using std::cin;
@@ -33,7 +34,7 @@ private:
 
 public:
     Casino();
-
+    Juego* obtenerJuego(int idJuego);
     virtual ~Casino();
 
     float convertirPesosAGonzos(float dinero);

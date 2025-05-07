@@ -18,6 +18,9 @@ Casino::Casino() {
     juegosDisponibles.push_back(juego2);
     auto *slots = new Slots();
     juegosDisponibles.push_back(slots);
+    auto *juego4 = new ParImpar();
+    juegosDisponibles.push_back(juego4);
+
 }
 
 void Casino::agregarJugador() {
@@ -172,4 +175,12 @@ Casino::~Casino() {
         delete juegoTemp;
     }
     cout << "Termine de llamar destructor de casino \n";
+}
+
+Juego* Casino::obtenerJuego(int idJuego) {
+    if (idJuego > 0 && idJuego <= juegos.size()) {
+        return juegos[idJuego - 1]; // asumiendo que están en orden
+    } else {
+        return nullptr;
+    }
 }
